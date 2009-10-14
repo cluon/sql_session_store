@@ -48,6 +48,7 @@ class AbstractSession
 
     # retrieve the session table connection and get the 'raw' driver connection from it
     def session_connection
+      SqlSession.connection.verify!
       SqlSession.connection.raw_connection
     end
 
